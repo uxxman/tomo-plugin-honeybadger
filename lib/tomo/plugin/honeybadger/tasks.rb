@@ -6,7 +6,7 @@ module Tomo::Plugin::Honeybadger
         deployer = `whoami`.strip
         revision = `git rev-parse HEAD`.strip
 
-        remote.run('bundle', 'exec', 'honeybadger', 'deploy', '-r', settings[:git_url], '-s', revision, '-u', deployer)
+        remote.run("bundle", "exec", "honeybadger", "deploy", "-r", settings[:git_url], "-s", revision, "-u", deployer)
       end
     end
   end
