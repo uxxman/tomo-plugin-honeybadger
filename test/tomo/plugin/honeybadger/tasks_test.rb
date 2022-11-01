@@ -7,6 +7,7 @@ class Tomo::Plugin::Honeybadger::TasksTest < Minitest::Test
 
   def test_deploy
     @tester.run_task("honeybadger:deploy")
+
     assert_match("bundle exec honeybadger deploy", @tester.executed_script)
   end
 end
